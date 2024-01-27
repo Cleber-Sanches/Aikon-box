@@ -7,7 +7,7 @@ O **Ainko Box** é uma aplicação desenvolvida com Node.js, projetada para ofer
 ## Escolhendo os icones
 No seu README.md, copie a URL base: 
 ```plaintext
-"https://api-ainko-box.com/gerar-svgs?nomes="
+"https://tense-sweatshirt-duck.cyclic.app/icons"
 ```
 
 ### Ícone Único
@@ -15,8 +15,9 @@ Se deseja um único ícone, adicione um dos parâmetros `?i=`, `?icones=` ou `?i
 
 **Exemplo:**
 ``` plaintext
-?i=nome_do_icone
+?i=laravel
 ```
+![](https://tense-sweatshirt-duck.cyclic.app/icons?i=laravel)
 
 ### Lista de Ícones
 Caso prefira uma variedade de ícones, basta adicionar os nomes dos ícones e separe por vírgulas. 
@@ -26,11 +27,14 @@ Caso prefira uma variedade de ícones, basta adicionar os nomes dos ícones e se
 ?i=javascript,node,discord
 ```
 
+![](https://tense-sweatshirt-duck.cyclic.app/icons?i=javascript,nodejs,discord)
+
 ## Tratamento de Erros: Ícone Não Encontrado
 
 Caso o usuário insira um nome de ícone incorreto, o **Ainko Box** exibirá um ícone de erro padrão. Entretanto, é fácil corrigir isso! Basta seguir estas instruções:
 
-<br>
+![](https://tense-sweatshirt-duck.cyclic.app/icons?i=e)
+
 
 -  **Identifique o Erro:** Se um ícone de erro for exibido, verifique a URL gerada e encontre o nome do ícone que está causando o problema.
 
@@ -41,13 +45,15 @@ Caso o usuário insira um nome de ícone incorreto, o **Ainko Box** exibirá um 
 
 **URL Incorreta:** <br>
 ```html 
-https://api-ainko-box.com/gerar-svgs?nomes=errado
+https://tense-sweatshirt-duck.cyclic.app/icons?i=javascript,phpp,git
 ```
+![](https://tense-sweatshirt-duck.cyclic.app/icons?i=javascript,phpp,git)
 
 **URL Correta:**  <br>
 ```html
-`https://api-ainko-box.com/gerar-svgs?nomes=correto
+https://tense-sweatshirt-duck.cyclic.app/icons?i=javascript,php,git
 ```
+![](https://tense-sweatshirt-duck.cyclic.app/icons?i=javascript,php,git)
 <br>
 
  `Atualize a Página:` Após corrigir a URL, atualize a página ou README. O ícone correto será exibido conforme o nome corrigido.
@@ -70,9 +76,10 @@ Ajuste o tamanho dos ícones conforme suas preferências utilizando um destes pa
 Exemplo: Para ícones maiores, insira números acima de 48. Para ícones menores, experimente valores abaixo de 30. Encontre o tamanho perfeito para personalizar sua experiência visual!
 
 ``` plaintext
-?i=javascript,node,discord&?t=64
+?i=html,react,notion&t=64
 ```
 
+![](https://tense-sweatshirt-duck.cyclic.app/icons?i=html,react,notion&t=64)
 
 ## Limitando Ícones por Linha:
 
@@ -81,8 +88,9 @@ Controle quantos ícones são exibidos por linha usando o parâmetro `p=,` `porl
 **Exemplo:**
 
 ```plaintext
-?i=javascript,node,discord&t=64&p=3
+?i=vue,insonmina,mongodb,npm,nest,typescript&t=64&p=3
 ```
+![](https://tense-sweatshirt-duck.cyclic.app/icons?i=vue,mysql,css,beekeeper,vscode,express.js&t=64&p=3)
 
 ## Centralizando Ícones no README:
 
@@ -91,6 +99,9 @@ Centralize os ícones adicionando o bloco de código que os contém dentro da ta
 ```html
 
 <p align="center">
-    <img src="dominio/icons?i=git,kubernetes,docker,c,vim" />
+    <img src="https://tense-sweatshirt-duck.cyclic.app/icons?i=kotlin,postgresql,bootstrap,nodemon,ruby&t=53" />
 </p>;
 ```
+<p align="center">
+    <img src="https://tense-sweatshirt-duck.cyclic.app/icons?i=kotlin,postgresql,bootstrap,nodemon,ruby&t=53" />
+</p>
