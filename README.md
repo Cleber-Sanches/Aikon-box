@@ -20,15 +20,15 @@ O **Aikon Box** é uma aplicação desenvolvida com Node.js, projetada para ofer
 # Como Usar o Aikon Box?
 ## Escolhendo os icones
 No seu README.md, copie a URL base: 
-```plaintext
-"https://www.aikonbox.com.br/icons"
+```md
+https://www.aikonbox.com.br/icons
 ```
 
 ### Ícone Único
 Se deseja um único ícone, adicione um dos parâmetros `?i=`, `?icones=` ou `?icon=` seguido do nome do ícone desejado. 
 
 **Exemplo:**
-``` plaintext
+``` url
 ?i=laravel
 ```
 ![](https://www.aikonbox.com.br/icons?i=laravel)
@@ -37,11 +37,11 @@ Se deseja um único ícone, adicione um dos parâmetros `?i=`, `?icones=` ou `?i
 Caso prefira uma variedade de ícones, basta adicionar os nomes dos ícones e separe por vírgulas. 
 
 **Exemplo:**
-``` plaintext
-?i=javascript,node,discord
+``` url
+?i=wordpress,prisma,materialui,webpack
 ```
 
-![](https://www.aikonbox.com.br/icons?i=javascript,nodejs,discord)
+![](https://www.aikonbox.com.br/icons?i=wordpress,prisma,materialui,webpack)
 
 ## Ícone Não Encontrado
 
@@ -58,16 +58,16 @@ Caso você insira um nome de ícone incorreto, o **Aikon Box** exibirá um ícon
 
 
 **URL Incorreta:** <br>
-```html 
-https://www.aikonbox.com.br/icons?i=javascript,phpp,git
+```url 
+https://www.aikonbox.com.br/icons?i=firebase,phpp,angular,postman
 ```
-![](https://www.aikonbox.com.br/icons?i=javascript,phpp,git)
+![](https://www.aikonbox.com.br/icons?i=firebase,phpp,angular,postman)
 
 **URL Correta:**  <br>
-```html
-https://www.aikonbox.com.br/icons?i=javascript,php,git
+```url
+https://www.aikonbox.com.br/icons?i=firebase,phpp,angular,postman
 ```
-![](https://www.aikonbox.com.br/icons?i=javascript,php,git)
+![](https://www.aikonbox.com.br/icons?i=firebase,php,angular,postman)
 <br>
 
  `Atualize a Página:` Após corrigir a URL, atualize a página ou README. O ícone correto será exibido conforme o nome corrigido.
@@ -85,11 +85,11 @@ Ajuste o tamanho dos ícones conforme suas preferências utilizando um destes pa
 
 Exemplo: Para ícones maiores, insira números acima de 48. Para ícones menores, experimente valores abaixo de 30. Encontre o tamanho perfeito para personalizar sua experiência visual!
 
-``` plaintext
-?i=html,react,notion&t=64
+``` url
+?i=adonisjs,reactjs,redux,cplusplus,csharp,git,typescript,sass&t=64
 ```
 
-![](https://www.aikonbox.com.br/icons?i=html,react,notion&t=64)
+![](https://www.aikonbox.com.br/icons?i=adonisjs,reactjs,redux,cplusplus,csharp,git,typescript,sass&t=64)
 
 ## Limitando Ícones por Linha:
 
@@ -97,10 +97,10 @@ Controle quantos ícones são exibidos por linha usando o parâmetro `p=,` `porl
 
 **Exemplo:**
 
-```plaintext
-?i=vue,insonmina,mongodb,npm,nest,typescript&t=64&p=3
+```url
+?i=vue,docker,mongodb,nestjs,nextjs,figma,flutter,go&t=64&p=4
 ```
-![](https://www.aikonbox.com.br/icons?i=vue,mysql,css,beekeeper,vscode,express.js&t=64&p=3)
+![](https://www.aikonbox.com.br/icons?i=vue,docker,mongodb,nestjs,nextjs,figma,flutter,go&t=64&p=4)
 
 ## Centralizando Ícones no README:
 
