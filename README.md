@@ -1,13 +1,25 @@
+
+
+
 <img src="https://github.com/Cleber-Sanches/Aikon-box/blob/main/.github/banner.svg"/>
 
-# O que é o Ainko Box?
-O **Ainko Box** é uma aplicação desenvolvida com Node.js, projetada para oferecer uma maneira simples e eficaz de integrar ícones personalizados ao seu README do GitHub. Com esta ferramenta, você pode adicionar um toque especial ao seu perfil, destacando suas habilidades de uma forma visualmente atraente.
+<div align="center">
+ 
+ ### solicite ícones
 
-# Como Usar o Ainko Box?
+você pode solicitar ícones personalizados abrindo um issue.
+</div>
+
+<br/>
+
+# O que é o Aikon Box?
+O **Aikon Box** é uma aplicação desenvolvida com Node.js, projetada para oferecer uma maneira simples e eficaz de integrar ícones personalizados ao seu README do GitHub. Com esta ferramenta, você pode adicionar um toque especial ao seu perfil, destacando suas habilidades de uma forma visualmente atraente.
+
+# Como Usar o Aikon Box?
 ## Escolhendo os icones
 No seu README.md, copie a URL base: 
 ```plaintext
-"https://tense-sweatshirt-duck.cyclic.app/icons"
+"https://www.aikonbox.com.br/icons"
 ```
 
 ### Ícone Único
@@ -17,7 +29,7 @@ Se deseja um único ícone, adicione um dos parâmetros `?i=`, `?icones=` ou `?i
 ``` plaintext
 ?i=laravel
 ```
-![](https://tense-sweatshirt-duck.cyclic.app/icons?i=laravel)
+![](https://www.aikonbox.com.br/icons?i=laravel)
 
 ### Lista de Ícones
 Caso prefira uma variedade de ícones, basta adicionar os nomes dos ícones e separe por vírgulas. 
@@ -27,13 +39,13 @@ Caso prefira uma variedade de ícones, basta adicionar os nomes dos ícones e se
 ?i=javascript,node,discord
 ```
 
-![](https://tense-sweatshirt-duck.cyclic.app/icons?i=javascript,nodejs,discord)
+![](https://www.aikonbox.com.br/icons?i=javascript,nodejs,discord)
 
-## Tratamento de Erros: Ícone Não Encontrado
+## Ícone Não Encontrado
 
-Caso o usuário insira um nome de ícone incorreto, o **Ainko Box** exibirá um ícone de erro padrão. Entretanto, é fácil corrigir isso! Basta seguir estas instruções:
+Caso você insira um nome de ícone incorreto, o **Aikon Box** exibirá um ícone de erro padrão. Entretanto, é fácil corrigir isso! Basta seguir estas instruções:
 
-![](https://tense-sweatshirt-duck.cyclic.app/icons?i=e)
+![](https://www.aikonbox.com.br/icons?i=e)
 
 
 -  **Identifique o Erro:** Se um ícone de erro for exibido, verifique a URL gerada e encontre o nome do ícone que está causando o problema.
@@ -45,23 +57,19 @@ Caso o usuário insira um nome de ícone incorreto, o **Ainko Box** exibirá um 
 
 **URL Incorreta:** <br>
 ```html 
-https://tense-sweatshirt-duck.cyclic.app/icons?i=javascript,phpp,git
+https://www.aikonbox.com.br/icons?i=javascript,phpp,git
 ```
-![](https://tense-sweatshirt-duck.cyclic.app/icons?i=javascript,phpp,git)
+![](https://www.aikonbox.com.br/icons?i=javascript,phpp,git)
 
 **URL Correta:**  <br>
 ```html
-https://tense-sweatshirt-duck.cyclic.app/icons?i=javascript,php,git
+https://www.aikonbox.com.br/icons?i=javascript,php,git
 ```
-![](https://tense-sweatshirt-duck.cyclic.app/icons?i=javascript,php,git)
+![](https://www.aikonbox.com.br/icons?i=javascript,php,git)
 <br>
 
  `Atualize a Página:` Após corrigir a URL, atualize a página ou README. O ícone correto será exibido conforme o nome corrigido.
 
-  
-
-### Lista de Ícones Disponíveis
-Antes de escolher seus ícones, [confira a lista completa de ícones disponíveis](lik) para encontrar os nomes correspondentes.
 
 ## Personalize o Tamanho dos Ícones:
 
@@ -79,7 +87,7 @@ Exemplo: Para ícones maiores, insira números acima de 48. Para ícones menores
 ?i=html,react,notion&t=64
 ```
 
-![](https://tense-sweatshirt-duck.cyclic.app/icons?i=html,react,notion&t=64)
+![](https://www.aikonbox.com.br/icons?i=html,react,notion&t=64)
 
 ## Limitando Ícones por Linha:
 
@@ -90,7 +98,7 @@ Controle quantos ícones são exibidos por linha usando o parâmetro `p=,` `porl
 ```plaintext
 ?i=vue,insonmina,mongodb,npm,nest,typescript&t=64&p=3
 ```
-![](https://tense-sweatshirt-duck.cyclic.app/icons?i=vue,mysql,css,beekeeper,vscode,express.js&t=64&p=3)
+![](https://www.aikonbox.com.br/icons?i=vue,mysql,css,beekeeper,vscode,express.js&t=64&p=3)
 
 ## Centralizando Ícones no README:
 
@@ -99,9 +107,53 @@ Centralize os ícones adicionando o bloco de código que os contém dentro da ta
 ```html
 
 <p align="center">
-    <img src="https://tense-sweatshirt-duck.cyclic.app/icons?i=kotlin,postgresql,bootstrap,nodemon,ruby&t=53" />
+    <img src="https://www.aikonbox.com.br/icons?i=kotlin,postgresql,bootstrap,nodemon,ruby&t=53" />
 </p>;
 ```
 <p align="center">
-    <img src="https://tense-sweatshirt-duck.cyclic.app/icons?i=kotlin,postgresql,bootstrap,nodemon,ruby&t=53" />
+    <img src="https://www.aikonbox.com.br/icons?i=kotlin,postgresql,bootstrap,nodemon,ruby&t=53" />
 </p>
+
+<br>
+<hr>
+<div align="center">
+
+### Lista de Ícones Disponíveis
+
+| Ícone | Nome | Exemplo de Uso |
+|-------|------|------|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=aws"/>|<div align="center">`aws`</div>| ```https://www.aikonbox.com.br/icons?i=aws```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=beekeeper"/>|<div align="center">`beekeeper`</div>| ```https://www.aikonbox.com.br/icons?i=beekeeper```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=bootstrap"/>|<div align="center">`bootstrap`</div>| ```https://www.aikonbox.com.br/icons?i=bootstrap```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=css"/>|<div align="center">`css`</div>| ```https://www.aikonbox.com.br/icons?i=css```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=discord"/>|<div align="center">`discord`</div>| ```https://www.aikonbox.com.br/icons?i=discord```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=dotenv"/>|<div align="center">`dotenv`</div>| ```https://www.aikonbox.com.br/icons?i=dotenv```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=express.js"/>|<div align="center">`express.js`</div>| ```https://www.aikonbox.com.br/icons?i=express.js```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=git"/>|<div align="center">`git`</div>| ```https://www.aikonbox.com.br/icons?i=git```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=github"/>|<div align="center">`github`</div>| ```https://www.aikonbox.com.br/icons?i=github```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=html"/>|<div align="center">`html`</div>| ```https://www.aikonbox.com.br/icons?i=html```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=illustrator"/>|<div align="center">`illustrator`</div>| ```https://www.aikonbox.com.br/icons?i=illustrator```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=insonmina"/>|<div align="center">`insonmina`</div>| ```https://www.aikonbox.com.br/icons?i=insonmina```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=javascript"/>|<div align="center">`javascript`</div>| ```https://www.aikonbox.com.br/icons?i=javascript```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=jwt"/>|<div align="center">`jwt`</div>| ```https://www.aikonbox.com.br/icons?i=jwt```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=knex"/>|<div align="center">`knex`</div>| ```https://www.aikonbox.com.br/icons?i=knex```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=kotlin"/>|<div align="center">`kotlin`</div>| ```https://www.aikonbox.com.br/icons?i=kotlin```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=laravel"/>|<div align="center">`laravel`</div>| ```https://www.aikonbox.com.br/icons?i=laravel```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=mongodb"/>|<div align="center">`mongodb`</div>| ```https://www.aikonbox.com.br/icons?i=mongodb```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=mysql"/>|<div align="center">`mysql`</div>| ```https://www.aikonbox.com.br/icons?i=mysql```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=nest"/>|<div align="center">`nest`</div>| ```https://www.aikonbox.com.br/icons?i=nest```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=nodejs"/>|<div align="center">`nodejs`</div>| ```https://www.aikonbox.com.br/icons?i=nodejs```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=nodemailer"/>|<div align="center">`nodemailer`</div>| ```https://www.aikonbox.com.br/icons?i=nodemailer```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=nodemon"/>|<div align="center">`nodemon`</div>| ```https://www.aikonbox.com.br/icons?i=nodemon```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=notion"/>|<div align="center">`notion`</div>| ```https://www.aikonbox.com.br/icons?i=notion```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=npm"/>|<div align="center">`npm`</div>| ```https://www.aikonbox.com.br/icons?i=npm```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=photoshop"/>|<div align="center">`photoshop`</div>| ```https://www.aikonbox.com.br/icons?i=photoshop```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=php"/>|<div align="center">`php`</div>| ```https://www.aikonbox.com.br/icons?i=php```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=postgresql"/>|<div align="center">`postgresql`</div>| ```https://www.aikonbox.com.br/icons?i=postgresql```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=react"/>|<div align="center">`react`</div>| ```https://www.aikonbox.com.br/icons?i=react```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=ruby"/>|<div align="center">`ruby`</div>| ```https://www.aikonbox.com.br/icons?i=ruby```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=typescript"/>|<div align="center">`typescript`</div>| ```https://www.aikonbox.com.br/icons?i=typescript```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=vscode"/>|<div align="center">`vscode`</div>| ```https://www.aikonbox.com.br/icons?i=vscode```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=vue"/>|<div align="center">`vue`</div>| ```https://www.aikonbox.com.br/icons?i=vue```|
+</div>
+
