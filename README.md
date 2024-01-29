@@ -3,6 +3,8 @@
 
 <img src="https://github.com/Cleber-Sanches/Aikon-box/blob/main/.github/banner.svg"/>
 
+
+
 <div align="center">
  
  ### solicite ícones
@@ -157,3 +159,7 @@ Centralize os ícones adicionando o bloco de código que os contém dentro da ta
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=vue"/>|<div align="center">`vue`</div>| ```https://www.aikonbox.com.br/icons?i=vue```|
 </div>
 
+
+<div  align="center" >
+ <img src="https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2FCleber-Sanches%2FAikon-box&label=Views&labelColor=%23697689&countColor=%232ccce4&style=flat" />
+</div>
