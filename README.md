@@ -98,7 +98,7 @@ Controle quantos ícones são exibidos por linha usando o parâmetro `p=,` `porl
 **Exemplo:**
 
 ```url
-?i=vue,docker,mongodb,nestjs,nextjs,figma,flutter,go&t=64&p=4
+?i=vue,docker,mongodb,nestjsjs,nextjs,figma,flutter,go&t=64&p=4
 ```
 ![](https://www.aikonbox.com.br/icons?i=vue,docker,mongodb,nestjs,nextjs,figma,flutter,go&t=64&p=4)
 
@@ -130,14 +130,14 @@ Centralize os ícones adicionando o bloco de código que os contém dentro da ta
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=aws"/>|<div align="center">`aws`</div>| ```https://www.aikonbox.com.br/icons?i=aws```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=beekeeper"/>|<div align="center">`beekeeper`</div>| ```https://www.aikonbox.com.br/icons?i=beekeeper```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=bootstrap"/>|<div align="center">`bootstrap`</div>| ```https://www.aikonbox.com.br/icons?i=bootstrap```|
-| <img align="center" src="https://www.aikonbox.com.br/icons?i=c#"/>|<div align="center">`c#`</div>| ```https://www.aikonbox.com.br/icons?i=c#```|
-| <img align="center" src="https://www.aikonbox.com.br/icons?i=c++"/>|<div align="center">`c++`</div>| ```https://www.aikonbox.com.br/icons?i=c++```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=csharp"/>|<div align="center">`csharp`</div>| ```https://www.aikonbox.com.br/icons?i=cshar```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=cplusplus"/>|<div align="center">`cplusplus`</div>| ```https://www.aikonbox.com.br/icons?i=cplusplus```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=c"/>|<div align="center">`c`</div>| ```https://www.aikonbox.com.br/icons?i=c```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=css"/>|<div align="center">`css`</div>| ```https://www.aikonbox.com.br/icons?i=css```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=discord"/>|<div align="center">`discord`</div>| ```https://www.aikonbox.com.br/icons?i=discord```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=docker"/>|<div align="center">`docker`</div>| ```https://www.aikonbox.com.br/icons?i=docker```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=dotenv"/>|<div align="center">`dotenv`</div>| ```https://www.aikonbox.com.br/icons?i=dotenv```|
-| <img align="center" src="https://www.aikonbox.com.br/icons?i=express.js"/>|<div align="center">`express.js`</div>| ```https://www.aikonbox.com.br/icons?i=express.js```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=expressjs"/>|<div align="center">`expressjs`</div>| ```https://www.aikonbox.com.br/icons?i=expressjs```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=figma"/>|<div align="center">`figma`</div>| ```https://www.aikonbox.com.br/icons?i=figma```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=firebase"/>|<div align="center">`firebase`</div>| ```https://www.aikonbox.com.br/icons?i=firebase```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=flutter"/>|<div align="center">`flutter`</div>| ```https://www.aikonbox.com.br/icons?i=flutter```|
@@ -146,7 +146,7 @@ Centralize os ícones adicionando o bloco de código que os contém dentro da ta
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=go"/>|<div align="center">`go`</div>| ```https://www.aikonbox.com.br/icons?i=go```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=html"/>|<div align="center">`html`</div>| ```https://www.aikonbox.com.br/icons?i=html```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=illustrator"/>|<div align="center">`illustrator`</div>| ```https://www.aikonbox.com.br/icons?i=illustrator```|
-| <img align="center" src="https://www.aikonbox.com.br/icons?i=insonmina"/>|<div align="center">`insonmina`</div>| ```https://www.aikonbox.com.br/icons?i=insonmina```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=insomnia"/>|<div align="center">`insomnia`</div>| ```https://www.aikonbox.com.br/icons?i=insomnia```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=javascript"/>|<div align="center">`javascript`</div>| ```https://www.aikonbox.com.br/icons?i=javascript```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=jest"/>|<div align="center">`jest`</div>| ```https://www.aikonbox.com.br/icons?i=jest```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=jwt"/>|<div align="center">`jwt`</div>| ```https://www.aikonbox.com.br/icons?i=jwt```|
@@ -157,7 +157,7 @@ Centralize os ícones adicionando o bloco de código que os contém dentro da ta
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=materialui"/>|<div align="center">`materialui`</div>| ```https://www.aikonbox.com.br/icons?i=materialui```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=mongodb"/>|<div align="center">`mongodb`</div>| ```https://www.aikonbox.com.br/icons?i=mongodb```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=mysql"/>|<div align="center">`mysql`</div>| ```https://www.aikonbox.com.br/icons?i=mysql```|
-| <img align="center" src="https://www.aikonbox.com.br/icons?i=nest"/>|<div align="center">`nest`</div>| ```https://www.aikonbox.com.br/icons?i=nest```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=nestjs"/>|<div align="center">`nestjs`</div>| ```https://www.aikonbox.com.br/icons?i=nestjs```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=nextjs"/>|<div align="center">`nextjs`</div>| ```https://www.aikonbox.com.br/icons?i=nextjs```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=nodejs"/>|<div align="center">`nodejs`</div>| ```https://www.aikonbox.com.br/icons?i=nodejs```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=nodemailer"/>|<div align="center">`nodemailer`</div>| ```https://www.aikonbox.com.br/icons?i=nodemailer```|
@@ -170,7 +170,7 @@ Centralize os ícones adicionando o bloco de código que os contém dentro da ta
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=postman"/>|<div align="center">`postman`</div>| ```https://www.aikonbox.com.br/icons?i=postman```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=prisma"/>|<div align="center">`prisma`</div>| ```https://www.aikonbox.com.br/icons?i=prisma```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=python"/>|<div align="center">`python`</div>| ```https://www.aikonbox.com.br/icons?i=python```|
-| <img align="center" src="https://www.aikonbox.com.br/icons?i=react"/>|<div align="center">`react`</div>| ```https://www.aikonbox.com.br/icons?i=react```|
+| <img align="center" src="https://www.aikonbox.com.br/icons?i=reactjs"/>|<div align="center">`reactjs`</div>| ```https://www.aikonbox.com.br/icons?i=reactjs```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=redux"/>|<div align="center">`redux`</div>| ```https://www.aikonbox.com.br/icons?i=redux```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=ruby"/>|<div align="center">`ruby`</div>| ```https://www.aikonbox.com.br/icons?i=ruby```|
 | <img align="center" src="https://www.aikonbox.com.br/icons?i=sass"/>|<div align="center">`sass`</div>| ```https://www.aikonbox.com.br/icons?i=sass```|
