@@ -2,9 +2,9 @@ const { resolve } = require('path');
 const { generateOneSvg } = require('../utils/generateOneSvg');
 const loadSvg = require('../utils/fileLoading');
 
-const svgDirPath = resolve(__dirname, '../../assets/statusCode');
+const svgDirPath = resolve(__dirname, '../../assets/methods');
 
-const getStatusCode = async (req, res) => {
+const getMethodsHttp = async (req, res) => {
   try {
     const { i } = req.query;
 
@@ -12,10 +12,10 @@ const getStatusCode = async (req, res) => {
       return res.status(400).json({ error: 'Você não especificou nenhum ícone!' });
     }
 
-    const nameStatuCode = i.split(',');
+    const nameMethods = i.split(',');
 
     const files = await loadSvg(svgDirPath);
-    const svg = generateOneSvg(nameStatuCode, files);
+    const svg = generateOneSvg(nameMethods, files);
 
     res.set('Content-Type', 'image/svg+xml');
     return res.send(svg);
@@ -24,4 +24,4 @@ const getStatusCode = async (req, res) => {
   }
 };
 
-module.exports = getStatusCode;
+module.exports = getMethodsHttp;
