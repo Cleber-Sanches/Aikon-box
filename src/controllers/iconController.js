@@ -1,45 +1,38 @@
-const { carregarIcones, gerarIcones } = require("../services/icon.service");
+const { resolve } = require('path');
+const generateIcons = require('../services/icon.service');
+const loadSvg = require('../utils/fileLoading');
 
-const ICONES_POR_LINHA = 15;
-const UM_ICONE = 48;
+const iconsPerLineDefault = 15;
+const sizeDefault = 48;
+const iconsDirectoryPath = resolve(__dirname, '../../assets/icons');
 
-const requisitarIcones = async (req, res) => {
+const getIcons = async (req, res) => {
   try {
     const { query } = req;
-    const parametroIcone = query.i || query.icones || query.icon;
-    const iconesPorLinha =
-      (query &&
-        parseInt(
-          query.iconesPorLinha || query.p || query.porLinha || query.porlinha,
-          10
-        )) ||
-      ICONES_POR_LINHA;
-    const tamanho =
-      parseInt(query.t || query.tamanho || query.width, 10) || UM_ICONE;
+    const iconName = query.i || query.icons;
+    const iconsPerLine = parseInt(query.iconsPerLine || query.perLine, 10) || iconsPerLineDefault;
+    const iconSize = parseInt(query.size, 10) || sizeDefault;
 
-    if (!parametroIcone) {
-      return res
-        .status(400)
-        .json({ error: "Você não especificou nenhum ícone!" });
+    if (!iconName) {
+      return res.status(400).json({ error: 'Você não especificou nenhum ícone!' });
     }
 
-    if (isNaN(iconesPorLinha) || iconesPorLinha < 1 || iconesPorLinha > 60) {
-      return res
-        .status(400)
-        .json({ error: "Ícones por linha deve ser um número entre 1 e 60" });
+    if (Number.isNaN(iconsPerLine) || iconsPerLine < 1 || iconsPerLine > 60) {
+      return res.status(400).json({ error: 'Ícones por linha deve ser um número entre 1 e 60' });
     }
 
-    const icones = await carregarIcones();
+    const iconNames = iconName.toLowerCase();
 
-    const nomesIcones = parametroIcone.split(","); // Assumindo que os nomes dos ícones estão separados por vírgula
-    const svg = gerarIcones(nomesIcones, iconesPorLinha, icones, tamanho);
+    const icons = await loadSvg(iconsDirectoryPath);
+    const iconNamesList = iconNames.split(',');
+    const generatedSvg = generateIcons(iconNamesList, iconsPerLine, icons, iconSize);
 
-    res.set("Content-Type", "image/svg+xml");
-    res.send(svg);
-  } catch (erro) {
-    console.error(`Erro na solicitação: ${erro.message}`);
-    res.status(500).json({ error: "Erro interno do servidor." });
+    res.set('Content-Type', 'image/svg+xml');
+    return res.send(generatedSvg);
+  } catch (error) {
+    console.error(`Erro na solicitação: ${error.message}`);
+    return res.status(500).json({ error: 'Erro interno do servidor.' });
   }
 };
 
-module.exports = requisitarIcones;
+module.exports = getIcons;

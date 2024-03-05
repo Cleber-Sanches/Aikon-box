@@ -1,10 +1,12 @@
-const express = require("express");
-const requisitarIcones = require("./controllers/iconController");
-const manipuladorErros = require("./middlewares/errorHandler");
+const express = require('express');
+const getIcons = require('./controllers/iconController');
+const getStatusCode = require('./controllers/statusCodeController');
+const getMethodsHttp = require('./controllers/methodsHttpController');
 
 const routes = express();
 
-routes.use(manipuladorErros);
-routes.get("/icons", requisitarIcones);
+routes.get('/icons', getIcons);
+routes.get('/doc/statuscode', getStatusCode);
+routes.get('/doc/methods', getMethodsHttp);
 
 module.exports = routes;
