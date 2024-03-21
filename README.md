@@ -75,21 +75,19 @@ https://www.aikonbox.com.br/icons?i=firebase,phpp,angular,postman
 
 ## Personalize o Tamanho dos Ícones:
 
-Ajuste o tamanho dos ícones conforme suas preferências utilizando um destes parâmetros, seguido por um número:
+Ajuste o tamanho dos ícones conforme suas preferências utilizando o parâmetro, seguido por um número:
 
 `
-?t=
-?tamanho=
-?width=
+?size=
 `
 
 Exemplo: Para ícones maiores, insira números acima de 48. Para ícones menores, experimente valores abaixo de 30. Encontre o tamanho perfeito para personalizar sua experiência visual!
 
 ``` url
-?i=adonisjs,reactjs,redux,cplusplus,csharp,git,typescript,sass&t=64
+?i=adonisjs,reactjs,redux,cplusplus,csharp,git,typescript,sass&size=64
 ```
 
-![](https://www.aikonbox.com.br/icons?i=adonisjs,reactjs,redux,cplusplus,csharp,git,typescript,sass&t=64)
+![](https://www.aikonbox.com.br/icons?i=adonisjs,reactjs,redux,cplusplus,csharp,git,typescript,sass&size=64)
 
 ## Limitando Ícones por Linha:
 
@@ -98,9 +96,9 @@ Controle quantos ícones são exibidos por linha usando o parâmetro `p=,` `porl
 **Exemplo:**
 
 ```url
-?i=vue,docker,mongodb,nestjsjs,nextjs,figma,flutter,go&t=64&p=4
+?i=vue,docker,mongodb,nestjsjs,nextjs,figma,flutter,go&size=64&p=4
 ```
-![](https://www.aikonbox.com.br/icons?i=vue,docker,mongodb,nestjs,nextjs,figma,flutter,go&t=64&p=4)
+![](https://www.aikonbox.com.br/icons?i=vue,docker,mongodb,nestjs,nextjs,figma,flutter,go&size=64&p=4)
 
 ## Centralizando Ícones no README:
 
@@ -109,11 +107,11 @@ Centralize os ícones adicionando o bloco de código que os contém dentro da ta
 ```html
 
 <p align="center">
-    <img src="https://www.aikonbox.com.br/icons?i=kotlin,postgresql,bootstrap,nodemon,ruby&t=53" />
+    <img src="https://www.aikonbox.com.br/icons?i=kotlin,postgresql,bootstrap,nodemon,ruby&size=53" />
 </p>;
 ```
 <p align="center">
-    <img src="https://www.aikonbox.com.br/icons?i=kotlin,postgresql,bootstrap,nodemon,ruby&t=53" />
+    <img src="https://www.aikonbox.com.br/icons?i=kotlin,postgresql,bootstrap,nodemon,ruby&size=53" />
 </p>
 
 <br>
