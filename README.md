@@ -91,14 +91,14 @@ Exemplo: Para ícones maiores, insira números acima de 48. Para ícones menores
 
 ## Limitando Ícones por Linha:
 
-Controle quantos ícones são exibidos por linha usando o parâmetro `p=,` `porlinha=` ou `iconesporlinha=` seguido de um número. O máximo permitido é 60, enquanto o mínimo é 1.
+Controle quantos ícones são exibidos por linha usando o parâmetro `perLine=` seguido de um número. O máximo permitido é 60, enquanto o mínimo é 1.
 
 **Exemplo:**
 
 ```url
 ?i=vue,docker,mongodb,nestjsjs,nextjs,figma,flutter,go&size=64&p=4
 ```
-![](https://www.aikonbox.com.br/icons?i=vue,docker,mongodb,nestjs,nextjs,figma,flutter,go&size=64&p=4)
+![](https://www.aikonbox.com.br/icons?i=vue,docker,mongodb,nestjs,nextjs,figma,flutter,go&size=64&perLine=4)
 
 ## Centralizando Ícones no README:
 
