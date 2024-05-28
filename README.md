@@ -65,7 +65,7 @@ https://www.aikonbox.com.br/icons?i=firebase,phpp,angular,postman
 
 **URL Correta:**  <br>
 ```url
-https://www.aikonbox.com.br/icons?i=firebase,phpp,angular,postman
+https://www.aikonbox.com.br/icons?i=firebase,php,angular,postman
 ```
 ![](https://www.aikonbox.com.br/icons?i=firebase,php,angular,postman)
 <br>
