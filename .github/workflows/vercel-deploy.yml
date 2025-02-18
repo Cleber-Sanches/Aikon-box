@@ -5,50 +5,62 @@ on:
     branches:
       - main
       - dev
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: 
-      name: ${{ github.ref == 'refs/heads/main' && 'PRD' || 'DEV' }}
+    strategy:
+      matrix:
+        environment: [dev, prd]
+        include:
+          - environment: dev
+            branch: dev
+            stage: preview
+            vercel_token: VERCEL_TOKEN_DEV
+          - environment: prd
+            branch: main
+            stage: production
+            vercel_token: VERCEL_TOKEN_PRD
+
     steps:
       - uses: actions/checkout@v3
+
+      - name: Check Branch
+        shell: bash
+        run: |
+          if [[ "${{ github.ref }}" != "refs/heads/${{ matrix.branch }}" ]]; then
+            echo "Branch doesn't match, skipping deployment."
+            exit 0
+          fi
 
       - name: Set Vercel Token and Environment
         shell: bash
         run: |
-          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-            echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN_PRD }}" >> $GITHUB_ENV
-            echo "VERCEL_ENV=production" >> $GITHUB_ENV
-          elif [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
-            echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN_DEV }}" >> $GITHUB_ENV
-            echo "VERCEL_ENV=preview" >> $GITHUB_ENV
-          fi
+          echo "VERCEL_TOKEN=${{ secrets[matrix.vercel_token] }}" >> $GITHUB_ENV
+          echo "VERCEL_ENV=${{ matrix.stage }}" >> $GITHUB_ENV
 
       - name: Debug Vercel Token
+        shell: bash
         run: |
-          echo "Vercel Token Length: ${#VERCEL_TOKEN}"
+          echo "Vercel Token Length: $(echo -n "$VERCEL_TOKEN" | wc -c)"
+
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
-      - name: Authenticate with Vercel
-        run: |
-          if [[ -z "$VERCEL_TOKEN" ]]; then
-            echo "Error: VERCEL_TOKEN is not set"
-            exit 1
-          fi
-          vercel login --token=$VERCEL_TOKEN
-
       - name: Pull Vercel Environment Variables
-        run: vercel pull --yes --environment=$VERCEL_ENV --token=$VERCEL_TOKEN
+        shell: bash
+        run: |
+          vercel pull --yes --environment=$VERCEL_ENV --token=$VERCEL_TOKEN
 
       - name: Install Dependencies and Build Project
         run: npm install && npm run build
 
       - name: Deploy Project to Vercel
+        shell: bash
         run: |
-          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+          if [[ "$VERCEL_ENV" == "production" ]]; then
             vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
-          elif [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
+          else
             vercel deploy --prebuilt --token=$VERCEL_TOKEN
           fi
