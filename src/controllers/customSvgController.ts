@@ -1,7 +1,8 @@
-const { resolve } = require('path');
-const loadSvg = require('../utils/fileLoading');
+import { resolve } from 'path';
+import { Request, Response } from 'express';
+import loadSvg from '../utils/fileLoading';
 
-const modifySvg = (svgContent, text, color) => {
+const modifySvg = (svgContent: string, text: string, color: string): string => {
   try {
     if (!text || typeof text !== 'string' || text.trim() === '') {
       throw new Error('Texto inválido fornecido.');
@@ -27,12 +28,12 @@ const modifySvg = (svgContent, text, color) => {
       .replace(/fill="#[0-9A-Fa-f]{6}"/g, `fill="#${color}"`);
 
     return modifiedSvg;
-  } catch (error) {
+  } catch (error: any) {
     throw new Error(`Erro ao modificar o SVG: ${error.message}`);
   }
 };
 
-const getSvgWithModifiedText = async (req, res) => {
+const getSvgWithModifiedText = async (req: Request, res: Response) => {
   try {
     const { text, color } = req.query;
     const colorDefault = color || '6C7688';
@@ -47,14 +48,14 @@ const getSvgWithModifiedText = async (req, res) => {
       return res.status(404).json({ error: 'Arquivo SVG não encontrado!' });
     }
 
-    const modifiedSvg = modifySvg(svgContent, text, colorDefault);
+    const modifiedSvg = modifySvg(svgContent, text as string, colorDefault as string);
 
     res.set('Content-Type', 'image/svg+xml');
     return res.send(modifiedSvg);
-  } catch (error) {
+  } catch (error: any) {
     console.error('Erro interno do servidor:', error);
     return res.status(500).json({ error: error.message });
   }
 };
 
-module.exports = getSvgWithModifiedText;
+export { getSvgWithModifiedText };
