@@ -19,7 +19,7 @@ jobs:
         run: npm install -g vercel
       - name: Deploy to Vercel Dev
         if: github.ref == 'refs/heads/dev'
-        run: vercel deploy --token ${{ secrets.VERCEL_TOKEN_DEV }} --env VERCEL_ENV=dev
+        run: vercel deploy --token ${{ secrets.VERCEL_TOKEN_DEV }}
       - name: Deploy to Vercel Prd
         if: github.ref == 'refs/heads/main'
-        run: vercel deploy --token ${{ secrets.VERCEL_TOKEN_PRD }} --env VERCEL_ENV=prd
+        run: vercel deploy --token ${{ secrets.VERCEL_TOKEN_PRD }}
