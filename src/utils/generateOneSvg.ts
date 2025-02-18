@@ -1,7 +1,7 @@
 const fileNotFound = 'notFound';
 const multipleParamsError = 'paramsError';
 
-const generateOneSvg = (nameSvg, file) => {
+const generateOneSvg = (nameSvg: string[], file: { [key: string]: string }): string => {
   if (nameSvg.length > 1) {
     return file[multipleParamsError] || '';
   }
@@ -16,6 +16,4 @@ const generateOneSvg = (nameSvg, file) => {
   `;
 };
 
-module.exports = {
-  generateOneSvg,
-};
+export { generateOneSvg };
