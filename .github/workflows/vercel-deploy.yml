@@ -26,7 +26,8 @@ jobs:
           fi
 
       - name: Debug Vercel Token
-        run: echo 'Vercel Token Length: ${#VERCEL_TOKEN}'
+        run: |
+          echo "Vercel Token Length: ${#VERCEL_TOKEN}"
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
