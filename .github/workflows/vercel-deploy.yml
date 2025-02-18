@@ -1,0 +1,38 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Vercel Token based on Environment
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN }}" >> $GITHUB_ENV
+          elif [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
+            echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN }}" >> $GITHUB_ENV
+          fi
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel Environment Variables
+        run: vercel pull --yes --token=$VERCEL_TOKEN
+
+      - name: Install Dependencies and Build Project
+        run: npm install && npm run build
+
+      - name: Deploy Project to Vercel
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
+          elif [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
+            vercel deploy --prebuilt --token=$VERCEL_TOKEN
+          fi
