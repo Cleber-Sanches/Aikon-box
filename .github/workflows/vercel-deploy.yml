@@ -9,10 +9,13 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: 
+      name: ${{ github.ref == 'refs/heads/main' && 'PRD' || 'DEV' }}
     steps:
       - uses: actions/checkout@v3
 
       - name: Set Vercel Token and Environment
+        shell: bash
         run: |
           if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
             echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN_PRD }}" >> $GITHUB_ENV
@@ -21,19 +24,9 @@ jobs:
             echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN_DEV }}" >> $GITHUB_ENV
             echo "VERCEL_ENV=preview" >> $GITHUB_ENV
           fi
-        shell: bash
 
       - name: Debug Vercel Token
-        run: |
-          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-            echo "Vercel token length (PRD): ${{ secrets.VERCEL_TOKEN_PRD }}"
-          elif [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
-            echo "Vercel token length (DEV): ${{ secrets.VERCEL_TOKEN_DEV }}"
-          else
-            echo "Vercel token length: N/A"
-          fi
-        shell: bash
-
+        run: echo 'Vercel Token Length: ${#VERCEL_TOKEN}'
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
@@ -44,7 +37,6 @@ jobs:
             exit 1
           fi
           vercel login --token=$VERCEL_TOKEN
-        shell: bash
 
       - name: Pull Vercel Environment Variables
         run: vercel pull --yes --environment=$VERCEL_ENV --token=$VERCEL_TOKEN
