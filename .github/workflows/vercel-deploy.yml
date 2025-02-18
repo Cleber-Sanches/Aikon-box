@@ -21,12 +21,30 @@ jobs:
             echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN_DEV }}" >> $GITHUB_ENV
             echo "VERCEL_ENV=preview" >> $GITHUB_ENV
           fi
+        shell: bash
+
+      - name: Debug Vercel Token
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            echo "Vercel token length (PRD): ${{ secrets.VERCEL_TOKEN_PRD }}"
+          elif [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
+            echo "Vercel token length (DEV): ${{ secrets.VERCEL_TOKEN_DEV }}"
+          else
+            echo "Vercel token length: N/A"
+          fi
+        shell: bash
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
       - name: Authenticate with Vercel
-        run: vercel login --token=$VERCEL_TOKEN
+        run: |
+          if [[ -z "$VERCEL_TOKEN" ]]; then
+            echo "Error: VERCEL_TOKEN is not set"
+            exit 1
+          fi
+          vercel login --token=$VERCEL_TOKEN
+        shell: bash
 
       - name: Pull Vercel Environment Variables
         run: vercel pull --yes --environment=$VERCEL_ENV --token=$VERCEL_TOKEN
