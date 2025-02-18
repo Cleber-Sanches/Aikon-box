@@ -1,66 +1,29 @@
-name: Deploy to Vercel
+name: Vercel Deploy
 
 on:
   push:
     branches:
-      - main
       - dev
-  workflow_dispatch:
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        environment: [dev, prd]
-        include:
-          - environment: dev
-            branch: dev
-            stage: preview
-            vercel_token: VERCEL_TOKEN_DEV
-          - environment: prd
-            branch: main
-            stage: production
-            vercel_token: VERCEL_TOKEN_PRD
-
     steps:
       - uses: actions/checkout@v3
-
-      - name: Check Branch
-        shell: bash
-        run: |
-          if [[ "${{ github.ref }}" != "refs/heads/${{ matrix.branch }}" ]]; then
-            echo "Branch doesn't match, skipping deployment."
-            exit 0
-          fi
-
-      - name: Set Vercel Token and Environment
-        shell: bash
-        run: |
-          echo "VERCEL_TOKEN=${{ secrets[matrix.vercel_token] }}" >> $GITHUB_ENV
-          echo "VERCEL_ENV=${{ matrix.stage }}" >> $GITHUB_ENV
-
-      - name: Debug Vercel Token
-        shell: bash
-        run: |
-          echo "Vercel Token Length: $(echo -n "$VERCEL_TOKEN" | wc -c)"
-
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
       - name: Install Vercel CLI
-        run: npm install --global vercel@latest
-
-      - name: Pull Vercel Environment Variables
-        shell: bash
-        run: |
-          vercel pull --yes --environment=$VERCEL_ENV --token=$VERCEL_TOKEN
-
-      - name: Install Dependencies and Build Project
-        run: npm install && npm run build
-
-      - name: Deploy Project to Vercel
-        shell: bash
-        run: |
-          if [[ "$VERCEL_ENV" == "production" ]]; then
-            vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
-          else
-            vercel deploy --prebuilt --token=$VERCEL_TOKEN
-          fi
+        run: npm install -g vercel
+      - name: Deploy to Vercel Dev
+        if: github.ref == 'refs/heads/dev'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN_DEV }}
+        run: vercel deploy --prebuilt --token $VERCEL_TOKEN --env VERCEL_ENV=dev --prod
+      - name: Deploy to Vercel Prd
+        if: github.ref == 'refs/heads/main'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN_PRD }}
+        run: vercel deploy --prebuilt --token $VERCEL_TOKEN --env VERCEL_ENV=prd --prod
