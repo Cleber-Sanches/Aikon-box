@@ -12,19 +12,24 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set Vercel Token based on Environment
+      - name: Set Vercel Token and Environment
         run: |
           if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-            echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN }}" >> $GITHUB_ENV
+            echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN_PRD }}" >> $GITHUB_ENV
+            echo "VERCEL_ENV=production" >> $GITHUB_ENV
           elif [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
-            echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN }}" >> $GITHUB_ENV
+            echo "VERCEL_TOKEN=${{ secrets.VERCEL_TOKEN_DEV }}" >> $GITHUB_ENV
+            echo "VERCEL_ENV=preview" >> $GITHUB_ENV
           fi
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
+      - name: Authenticate with Vercel
+        run: vercel login --token=$VERCEL_TOKEN
+
       - name: Pull Vercel Environment Variables
-        run: vercel pull --yes --token=$VERCEL_TOKEN
+        run: vercel pull --yes --environment=$VERCEL_ENV --token=$VERCEL_TOKEN
 
       - name: Install Dependencies and Build Project
         run: npm install && npm run build
